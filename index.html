@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            justify-items: center;
+        }
+        .container{
+            border: solid 2px #ed0808;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <table>
+                <h1>Employee Details</h1>
+                <tr>
+                    <td><label for="">Employee ID</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="">NIC</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="title" >Title</label></td>
+                    <td><input type="text" id="title" ></td>
+                </tr>
+                <tr>
+                    <td><label for="">First Name</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Last Name</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender</label></td>
+                    <td><input type="text" id="gender"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Date Of Birth</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Age</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Salary</label></td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+            <br>
+        </form>
+        <button type="submit">Submit</button>
+
+    </div>
+    <script>
+        document.getElementById('title').onchange = function(){
+            var Title = document.getElementById('title').value;
+            if(Title == 'Mr' ){
+                document.getElementById('gender').value = 'male';
+            }else if(Title == 'Ms' || Title == 'Mrs'){
+                document.getElementById('gender').value = 'female';
+            }else{
+                document.getElementById('gender').value= 'invalid title';
+            }
+        }
+    </script>
+</body>
+</html>
