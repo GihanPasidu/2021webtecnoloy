@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            justify-items: center;
+        body {
+            display: flex;
+            justify-content: center;
         }
-        .container{
-            border: solid 2px #ed0808;
+        
+        .container {
+            border: solid 2px rgb(10, 2, 26);
             padding: 20px;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <form action="">
@@ -28,8 +32,8 @@
                     <td><input type="text"></td>
                 </tr>
                 <tr>
-                    <td><label for="title" >Title</label></td>
-                    <td><input type="text" id="title" ></td>
+                    <td><label for="title">Title</label></td>
+                    <td><input type="text" id="title"></td>
                 </tr>
                 <tr>
                     <td><label for="">First Name</label></td>
@@ -62,16 +66,19 @@
 
     </div>
     <script>
-        document.getElementById('title').onchange = function(){
+        document.getElementById('title').onchange = function() {
             var Title = document.getElementById('title').value;
-            if(Title == 'Mr' ){
+            if (Title == 'Mr') {
                 document.getElementById('gender').value = 'male';
-            }else if(Title == 'Ms' || Title == 'Mrs'){
+            } else if (Title == 'Ms' || Title == 'Mrs') {
                 document.getElementById('gender').value = 'female';
-            }else{
-                document.getElementById('gender').value= 'invalid title';
+            } else {
+                document.getElementById('gender').value = 'invalid title';
             }
         }
     </script>
 </body>
+
+</html>
+
 </html>
